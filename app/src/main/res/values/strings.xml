@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fluidity</string>
+    <string name="app_bot">Droplet</string>
+    <string name="button_default">Buy</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="text_new">New Page</string>
+</resources>
