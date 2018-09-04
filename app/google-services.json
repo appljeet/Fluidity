@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "17852659012-2va3qti3pp30m307cbtuk93b57jrfck2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.com.fluid.fluidity",
+            "certificate_hash": "dd1127e3ed13687f61c71da619e00dac458893c3"
+          }
+        },
+        {
           "client_id": "17852659012-q54jsmts19epvfkr54vo7lp9gm1unl3u.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17852659012-q54jsmts19epvfkr54vo7lp9gm1unl3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
