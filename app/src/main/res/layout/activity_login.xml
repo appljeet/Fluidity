@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+
+    <EditText
+        android:id="@+id/signup_email_input"
+        android:layout_width="276dp"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <EditText
+        android:id="@+id/signup_password_input"
+        android:layout_width="273dp"
+        android:layout_height="51dp"
+        android:layout_margin="5dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="337dp" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:text="Register"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:text="Login"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+
+
+</android.support.constraint.ConstraintLayout>
