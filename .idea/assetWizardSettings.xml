@@ -75,7 +75,20 @@
                                     <map>
                                       <entry key="backgroundColor" value="a66373" />
                                       <entry key="backgroundImage" value="$USER_HOME$/Desktop/Logo 2 2.png" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Desktop/Logo 2.png" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Desktop/Logo 2.5.jpg" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="iconShape" value="VRECT" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/Logo 2.5.jpg" />
                                     </map>
                                   </option>
                                 </PersistentState>
