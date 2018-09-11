@@ -73,7 +73,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
-                    finish();1
+                    finish();
                     startActivity(new Intent(login.this, newUserActivity.class));
                 } else {
 
@@ -99,7 +99,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.buttonLogin:
                 finish();
-                startActivity(new Intent(this, NewInstall.class));
+                startActivity(new Intent(this, newDownload.class));
                 break;
         }
     }
