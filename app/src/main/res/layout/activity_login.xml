@@ -2,28 +2,31 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".login"
+    android:id="@+id/constraintlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_launcher_background"
+    android:gravity="center"
+    tools:ignore="MissingConstraints"
+    >
 
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/ic_launcher_background"
-        android:gravity="center"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
+
 
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="275dp">
+            android:layout_marginBottom="33dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
 
             <EditText
                 android:id="@+id/email"
@@ -40,8 +43,14 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout2"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="364dp">
+            android:layout_marginBottom="53dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginStart="58dp"
+            app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            android:layout_width="match_parent">
 
             <EditText
                 android:id="@+id/password"
@@ -54,7 +63,8 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:ignore="InvalidImeActionId" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -63,18 +73,35 @@
             style="?android:textAppearanceSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="89dp"
+            android:layout_marginEnd="145dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="5dp"
             android:background="@color/colorAccent"
             android:text="@string/action_createAccount"
             android:textColor="@android:color/black"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="473dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginStart="157dp"
+            android:layout_marginTop="131dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <!-- Link to Login Screen -->
-
-
-    </android.support.constraint.ConstraintLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -82,10 +109,13 @@
         android:layout_height="30dp"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="20dp"
-        android:visibility="gone" />
+        android:visibility="gone"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 
 
 
 
-</android.support.constraint.ConstraintLayout>
+
+
