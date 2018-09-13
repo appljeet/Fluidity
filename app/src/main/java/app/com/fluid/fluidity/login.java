@@ -18,6 +18,14 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class login extends AppCompatActivity implements View.OnClickListener {
 
+
+
+
+
+
+
+
+
     ProgressBar progressBar;
     EditText editTextEmail, editTextPassword;
 
@@ -36,6 +44,12 @@ public class login extends AppCompatActivity implements View.OnClickListener {
 
         findViewById(R.id.sign_up_button).setOnClickListener(this);
         findViewById(R.id.buttonLogin).setOnClickListener(this);
+
+
+
+
+
+
     }
 
     private void registerUser() {

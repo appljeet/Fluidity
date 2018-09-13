@@ -21,23 +21,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="ExtraText">
+
         <activity android:name=".newUserActivity" />
         //Starting Activity
 
-        <activity android:name=".login"
-            android:label="@string/app_name">
+        <activity
+            android:name=".login"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".newDownload"
-            android:label="@string/app_name">
+        <activity
+            android:name=".newDownload"
+            android:label="@string/app_name" />
 
-        </activity>
+        <activity
+            android:name=".postSignIn"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
