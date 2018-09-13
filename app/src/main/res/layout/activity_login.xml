@@ -52,7 +52,7 @@
                 android:hint="@string/firstName"
                 android:imeActionId="@+id/login"
                 android:imeOptions="actionUnspecified"
-                android:inputType="firstName"
+
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textColor="@android:color/white" />
@@ -73,7 +73,7 @@
                 android:hint="@string/lastName"
                 android:imeActionId="@+id/login"
                 android:imeOptions="actionUnspecified"
-                android:inputType="lastName"
+
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textColor="@android:color/white" />
@@ -118,7 +118,7 @@
             android:id="@+id/imageView3"
             android:layout_width="154dp"
             android:layout_height="198dp"
-            app:srcCompat="@drawable/ic_launcherweb"
+            app:srcCompat="@drawable/ic_dashboard_black_24dp"
             tools:layout_editor_absoluteX="115dp"
             tools:layout_editor_absoluteY="2dp" />
 
