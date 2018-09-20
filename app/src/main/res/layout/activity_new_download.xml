@@ -7,6 +7,148 @@
     tools:context=".newDownload">
 
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ic_launcher_background"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+        <!-- Link to Login Screen -->
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="264dp"
+            android:layout_height="101dp"
+            android:layout_marginBottom="175dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="66dp"
+            android:fontFamily="@font/allura"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="75sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/angry_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/angry_btn2"
+
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/new_download_button"
+            android:fontFamily="@font/allura"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Button"
+            android:textColor="#3162AD"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+
+        <Button
+            android:id="@+id/angry_btn3"
+
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/new_download_button"
+            android:fontFamily="@font/allura"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Button"
+            android:textColor="#3162AD"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/angry_btn2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="2dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.94">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
