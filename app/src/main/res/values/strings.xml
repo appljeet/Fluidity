@@ -33,6 +33,7 @@
     <string name="test">Test</string>
     <string name="lastName">Last Name</string>
     <string name="welcome">Welcome</string>
+    <string name ="userName">User Name</string>
 
 
     <string name="label_google_sign_in">Firebase + Google Sign In</string>

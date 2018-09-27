@@ -71,4 +71,10 @@
         <item name="android:textSize">36sp</item>
     </style>
 
+    <style name="welcomeScreen" parent="AppTheme" >
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/colorEggShell</item>
+        <item name="android:statusBarColor">@color/colorEggShell</item>
+    </style>
+
 </resources>

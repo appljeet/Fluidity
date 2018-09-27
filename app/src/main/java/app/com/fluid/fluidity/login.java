@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class login extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,7 +29,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
 
 
     ProgressBar progressBar;
-    EditText editTextEmail, editTextPassword;
+    EditText editTextEmail, editTextPassword, nameFirst, nameLast,nameUser;
 
     private FirebaseAuth mAuth;
 
@@ -36,14 +38,16 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        nameFirst= (EditText) findViewById(R.id.firstName);
+        nameLast= (EditText) findViewById(R.id.lastName);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        nameUser = (EditText) findViewById(R.id.userName);
 
         mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.sign_up_button).setOnClickListener(this);
+        findViewById(R.id.sign_up).setOnClickListener(this);
 
 
 
@@ -54,7 +58,10 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void registerUser() {
-        String email = editTextEmail.getText().toString().trim();
+        final String firstName = nameFirst.getText().toString().trim();
+        final String lastName = nameLast.getText().toString().trim();
+        final String email = editTextEmail.getText().toString().trim();
+        final String userName = nameUser.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         if (email.isEmpty()) {
@@ -88,6 +95,15 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
+
+                    //store first and last name here
+                    writeToDatabaseFull(firstName,lastName,userName);
+
+
+
+
+
+
                     finish();
                     startActivity(new Intent(login.this, newUserActivity.class));
                 } else {
@@ -108,12 +124,23 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.sign_up_button:
+            case R.id.sign_up:
                 registerUser();
                 break;
 
         }
     }
+
+    //call this to write to database
+
+    public void writeToDatabaseFull(String firstName, String lastName, String userName) {
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(userName);
+
+        myRef.setValue(firstName + " " + lastName );
+    }
+
 
 
 }
