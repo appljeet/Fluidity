@@ -19,7 +19,7 @@
         android:layout_marginEnd="57dp"
         android:layout_marginStart="57dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/rectanlge"
+        android:background="@drawable/rectangle"
         app:layout_constraintBottom_toTopOf="@+id/goForward"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,5 +92,20 @@
             />
 
     </ViewFlipper>
+
+    <TextView
+        android:id="@+id/showName"
+        android:layout_width="119dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

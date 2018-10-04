@@ -45,6 +45,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         nameUser = (EditText) findViewById(R.id.userName);
 
+
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.sign_up).setOnClickListener(this);
@@ -63,6 +64,25 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         final String email = editTextEmail.getText().toString().trim();
         final String userName = nameUser.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+
+
+        if (userName.isEmpty()) {
+            nameUser.setError("userName is required");
+            nameUser.requestFocus();
+            return;
+        }
+
+        if (firstName.isEmpty()) {
+            nameFirst.setError("First Name is Required");
+            nameFirst.requestFocus();
+            return;
+        }
+
+        if (lastName.isEmpty()) {
+            nameLast.setError("Last Name is required");
+            nameLast.requestFocus();
+            return;
+        }
 
         if (email.isEmpty()) {
             editTextEmail.setError("Email is required");
@@ -87,6 +107,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             editTextPassword.requestFocus();
             return;
         }
+
 
         progressBar.setVisibility(View.VISIBLE);
 
@@ -138,7 +159,8 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference(userName);
 
-        myRef.setValue(firstName + " " + lastName );
+        myRef.setValue(firstName + " " + lastName);
+
     }
 
 

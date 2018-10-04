@@ -9,7 +9,6 @@
     </style>
 
 
-
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -25,7 +24,7 @@
 
     <style name="postSignIn" parent="AppTheme" />
 
-    <style name="login" parent="AppTheme" >
+    <style name="login" parent="AppTheme">
         <item name="android:statusBarColor">@color/purple</item>
     </style>
 
@@ -48,7 +47,7 @@
     </style>
 
     <!-- Light EditTexts -->
-    <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="ThemeOverlay.MyTextDetail" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
@@ -71,10 +70,15 @@
         <item name="android:textSize">36sp</item>
     </style>
 
-    <style name="welcomeScreen" parent="AppTheme" >
+    <style name="welcomeScreen" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@color/colorEggShell</item>
         <item name="android:statusBarColor">@color/colorEggShell</item>
+    </style>
+
+    <style name="Settings" parent="AppTheme">
+        <item name="android:statusBarColor">@color/darkGrey</item>
+        <item name="android:windowBackground">@color/grey</item>
     </style>
 
 </resources>

@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="app.com.fluid.fluidity">
 
-
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -28,14 +26,13 @@
         <activity
             android:name=".login"
             android:label="@string/app_name"
-            android:theme="@style/welcomeScreen" >
+            android:theme="@style/welcomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".postSignIn"
             android:label="@string/app_name"
@@ -45,8 +42,20 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".welcomeScreen"
-            android:theme="@style/welcomeScreen"></activity>
+        <activity
+            android:name=".welcomeScreen"
+            android:theme="@style/welcomeScreen" />
+        <activity
+            android:name=".changeEmail"
+            android:theme="@style/Settings" />
+        <activity
+            android:name=".settings"
+            android:theme="@style/Settings" />
+        <activity
+            android:name=".homeScreen"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>
